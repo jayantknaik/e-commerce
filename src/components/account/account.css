@@ -1,0 +1,18 @@
+.Account{
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    width: 40%;
+    padding: 5% 0 5% 0;
+}

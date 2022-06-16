@@ -1,0 +1,55 @@
+.top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Josefin Slab', serif;
+    background-color: var(--dark-green);
+    color: var(--brown);
+    height: 5vh;
+    padding-right: 2%;
+}
+
+button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: var(--cream);
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid var(--cream);
+    margin-right: 1%;
+}
+
+.heading{
+    display: flex;
+    background-color: var(--cream);
+    color: var(--green);
+    font-family: 'Josefin Slab', serif;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    padding: 0% 2% 0% 2%;
+}
+
+#bliss{
+    margin-top: 5%;
+    font-size: 80px;
+}
+
+#nav{
+    border: none;
+    color: var(--green);
+    font-family: 'Josefin Slab', serif;
+    font-size: x-large;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: 'Josefin Slab', serif;
+    font-size: 100px;
+}

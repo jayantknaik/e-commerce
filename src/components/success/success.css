@@ -1,0 +1,12 @@
+.Success{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successScreen{
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    padding: 1%;
+    margin-top: 15%;
+}

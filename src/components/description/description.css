@@ -1,0 +1,33 @@
+.Description{
+    display: flex;
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    margin: 2%;
+    justify-content: space-evenly;
+}
+
+#image{
+    width: 500px;
+    height: 500px;
+}
+
+.description{
+    margin: 0 3% 0 3%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    /* width: 300px; */
+}
+
+select{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+
+button{
+    color: black;
+    border: 1px solid black;
+}

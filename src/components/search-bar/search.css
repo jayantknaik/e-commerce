@@ -1,0 +1,19 @@
+.Search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+input{
+    display: flex;
+    background-color: transparent;
+    width: 40vw;
+    height: 5vh;
+    border-radius: 50px;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 2%;
+    padding-right: 1%;
+    font-size: large;
+    color: var(--green);
+}
