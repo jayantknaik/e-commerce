@@ -5,7 +5,6 @@
     align-items: center;
     font-family: 'Josefin Slab', serif;
     background-color: var(--dark-green);
-    color: var(--brown);
     height: 5vh;
     padding-right: 2%;
 }
@@ -19,7 +18,6 @@ button{
     color: var(--cream);
     font-family: 'Raleway', sans-serif;
     border: 1px solid var(--cream);
-    margin-right: 1%;
 }
 
 .heading{
@@ -52,4 +50,15 @@ button{
     margin-top: 5%;
     font-family: 'Josefin Slab', serif;
     font-size: 100px;
+}
+
+#login{
+    border-color: var(--cream);
+    color: var(--cream);
+    margin-right: 1.5%;
+}
+
+#signup{
+    border-color: var(--cream);
+    color: var(--cream);
 }

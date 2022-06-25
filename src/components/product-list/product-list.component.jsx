@@ -13,7 +13,7 @@ const ProductList = (props) =>
                     props.data.map((res) =>
                     {
                         return (
-                            <Product name={res.name} price={res.price} description={res.description} id={res.id} image={res.image} quantity={res.quantity}/>
+                            <Product key={res.id} data={res} />    
                         )
                     })
                 }

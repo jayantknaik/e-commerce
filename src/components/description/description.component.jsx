@@ -1,27 +1,33 @@
 import './description.css';
-import React from 'react';
+import React, {useState} from 'react';
+import { changeQuantity } from '../../features/productSlice';
+import { useDispatch } from 'react-redux';
 
 const Description = (props) =>
 {
-    const tempDesc = JSON.parse(localStorage.getItem(props.data.id));
+    const [quantity, setQuantity] = useState(0);
+    const dispatch = useDispatch();
+    
     const selectQuantity = () =>
     {
-        props.data.quantity = document.getElementById("quantity").value;
+        setQuantity(document.getElementById("quantity").value);
     }
+    
     const addToCart = () =>
     {
-        localStorage.setItem(props.data.id, JSON.stringify(props.data));
+        dispatch(changeQuantity({productId: props.data.id, quantity}));
+
     }
 
     return (
         <div className="Description">
             <div className='image'>
-                <img id="image" src={tempDesc.image} alt="" />
+                <img id="image" src={props.data.image} alt="" />
             </div>
             <div className='description'>
-                <h1>{tempDesc.name}</h1>
-                <h2>₹{tempDesc.price}</h2>
-                <h4>{tempDesc.description}</h4>
+                <h1>{props.data.name}</h1>
+                <h2>₹{props.data.price}</h2>
+                <h4>{props.data.description}</h4>
                 <div className='buttons'>
                     <select name="quantity" id="quantity" onChange={()=>selectQuantity()}>
                         <option value="">Select quantity</option>
@@ -31,7 +37,7 @@ const Description = (props) =>
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                    <button type="button" onClick={()=> addToCart()}>ADD TO CART</button>
+                    <button type="button" onClick={() => addToCart()}>ADD TO CART</button>
                 </div>
             </div>
        </div>

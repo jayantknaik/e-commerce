@@ -1,30 +1,15 @@
 import './cart.css'
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { decrement, increment } from '../../features/productSlice';
 
 const Cart = () =>
 {
-    const allStorage = () =>
+    const dispatch = useDispatch();
+    const products = useSelector((state) => state.product.value);
+    let cartItems = products.filter((res) =>
     {
-
-        let values = [],
-            keys = Object.keys(localStorage),
-            i = keys.length;
-    
-        while (i--)
-        {
-            values.push(JSON.parse(localStorage.getItem(keys[i])));
-        }
-    
-        return values;
-    }
-    const localItems = allStorage();
-    // eslint-disable-next-line array-callback-return
-    const cartItems = localItems.filter((res) =>
-    {
-        if (res.quantity !== '0')
-        {
-            return res;
-        }
+        return res.quantity > 0;
     })
 
     let subtotal = 0;
@@ -49,7 +34,9 @@ const Cart = () =>
                                     <div>
                                         <h1>{res.name}</h1>
                                         <h3>PRICE: {res.price}</h3>
-                                        <h3>QUANTITY: {res.quantity}</h3>
+                                        <div class="quantity"> 
+                                            <h3>QUANTITY: <button class="change-btn" onClick={dispatch(increment(res.id))} >+</button> {res.quantity} <button class="change-btn" onClick={dispatch(decrement(res.id))}>-</button></h3>
+                                        </div>
                                         <h3>TOTAL PRICE: {parseFloat(res.price) * parseInt(res.quantity)}</h3>
                                     </div>
                                     <div>

@@ -33,3 +33,12 @@ h1{
 h5{
     color: var(--dark-green);
 }
+
+.mid-btn{
+    display: flex;
+    justify-content: center;
+}
+
+#cart-btn{
+    padding: 2%;
+}

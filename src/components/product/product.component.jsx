@@ -6,19 +6,20 @@ const Product = (props) =>
 { 
     const navigate = useNavigate();
     return (
-        <div className="Product" key={props.id} onClick={() =>
+        <div className="Product" key={props.data.id} onClick={() =>
         { 
-            localStorage.setItem(props.id, JSON.stringify(props));
-            navigate(`/description/${props.id}`);
-        }
-}>
+            navigate(`/description/${props.data.id}`);
+        }}>
                 <div className="image">
-                    <img src={props.image} alt="product" />
+                    <img src={props.data.image} alt="product" />
                 </div>
                 <div className="description">
-                    <h1>{ props.name }</h1>
-                    <h2>₹{ props.price }</h2>
-                    <h5>{ props.description }</h5>
+                    <h1>{ props.data.name }</h1>
+                    <h2>₹{ props.data.price }</h2>
+                <h5>{props.data.description}</h5>
+                <div className="mid-btn">
+                    <button id='cart-btn'>ADD TO CART</button>
+                </div>
                 </div>
         </div>
     )
